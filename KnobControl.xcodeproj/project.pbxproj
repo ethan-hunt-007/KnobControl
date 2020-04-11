@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		44E197262441E823002A5B78 /* KnobControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 44E197242441E823002A5B78 /* KnobControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44E1972D2441E880002A5B78 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E1972C2441E880002A5B78 /* Knob.swift */; };
+		44E1972F2441E908002A5B78 /* KnobRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E1972E2441E908002A5B78 /* KnobRenderer.swift */; };
+		44E197312441E962002A5B78 /* RotationGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E197302441E962002A5B78 /* RotationGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44E197212441E823002A5B78 /* KnobControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KnobControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E197242441E823002A5B78 /* KnobControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnobControl.h; sourceTree = "<group>"; };
 		44E197252441E823002A5B78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44E1972C2441E880002A5B78 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		44E1972E2441E908002A5B78 /* KnobRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobRenderer.swift; sourceTree = "<group>"; };
+		44E197302441E962002A5B78 /* RotationGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +52,11 @@
 		44E197232441E823002A5B78 /* KnobControl */ = {
 			isa = PBXGroup;
 			children = (
+				44E1972C2441E880002A5B78 /* Knob.swift */,
 				44E197242441E823002A5B78 /* KnobControl.h */,
 				44E197252441E823002A5B78 /* Info.plist */,
+				44E1972E2441E908002A5B78 /* KnobRenderer.swift */,
+				44E197302441E962002A5B78 /* RotationGestureRecognizer.swift */,
 			);
 			path = KnobControl;
 			sourceTree = "<group>";
@@ -95,6 +104,7 @@
 				TargetAttributes = {
 					44E197202441E823002A5B78 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -131,6 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E1972F2441E908002A5B78 /* KnobRenderer.swift in Sources */,
+				44E197312441E962002A5B78 /* RotationGestureRecognizer.swift in Sources */,
+				44E1972D2441E880002A5B78 /* Knob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +273,7 @@
 		44E1972A2441E823002A5B78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C9YMA892DM;
@@ -268,6 +282,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KnobControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,6 +291,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.grab.KnobControl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +300,7 @@
 		44E1972B2441E823002A5B78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C9YMA892DM;
@@ -292,6 +309,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KnobControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
